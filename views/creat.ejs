@@ -1,0 +1,31 @@
+<%- include("Partials/header.ejs")  %>
+
+<section class="create-post-section">
+    <div class="form-container">
+        <h1>Create a New Blog Post</h1>
+        <form id="create-post-form" action="/submit" method="post">
+            <label for="post-title">Title:</label>
+            <input type="text" id="post-title" name="title" >
+            
+            <label for="post-content">Content:</label>
+            <textarea id="post-content" name="content" rows="10" ></textarea>
+            
+            <label for="post-image">Image URL:</label>
+            <input type="url" id="post-image" name="post-image">
+            
+            <label for="post-category">Category:</label>
+            <select id="post-category" name="post-category" >
+                <!-- //required -->
+                <option value="Technology">Technology</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Health">Health</option>
+                <option value="Travel">Travel</option>
+                <option value="Business">Business</option>
+            </select>
+            
+            <button type="submit">Create Post</button>
+        </form>
+    </div>
+</section>
+
+<%- include("Partials/footer.ejs")  %>
